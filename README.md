@@ -95,6 +95,6 @@ At the end, the scoreboard displays:
 
 ```bash
 git clone https://github.com/Rehmat-Kaur6/Prisoner-s-Dilemma
-cd your-repo-name
+cd Prisoner-s-Dilemma
 npm install
 npm start
