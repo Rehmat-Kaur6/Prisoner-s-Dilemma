@@ -1,75 +1,60 @@
-# React + TypeScript + Vite
+Prisoner’s Dilemma Simulation 
+A simulation in React JS of the Iterated Prisoner’s Dilemma, exploring how different strategies perform over time in competitive environments. Inspired by Nicky Case's Evolution of Trust and a game theory course I took for fun.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ Project Background
+The Prisoner’s Dilemma is one of the most famous problems in game theory.
+It models the tension between Cooperation and Self-interest
+This simulation explores:
+Which strategies thrive long-term?
+Does cooperation win?
+Is aggression more profitable?
+How does forgiveness affect outcomes?
+How The Simulation Works
+The user selects:
+Number of players (minimum 2, maximum 100)
+Number of rounds
+Each player is assigned one of 8 strategies.
+Players compete round-robin style across repeated rounds.
+Scores are calculated using a standard payoff structure.
+At the end, the scoreboard displays:
+Top performing players
+Highest scoring strategies
+Overall rankings
+ Implemented Strategies
+1 Tit For Tat (TFT)
+Starts by cooperating
+Then copies opponent’s previous move
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2 Generous Tit For Tat
+Like TFT
+Occasionally forgives defections
+Prevents endless retaliation cycles
+3 Suspicious Tit For Tat
+Starts by defecting
+Then mirrors opponent
+ Defensive variation of TFT
+4 Always Defect
+Defects every round
+ Maximizes short-term exploitation
+5 Always Cooperate
+Cooperates every round
+ Highly exploitable but strong in cooperative environments
+6 Random
+Chooses cooperate or defect randomly
+ Unpredictable, inconsistent
+7 Pavlov (Win-Stay, Lose-Shift)
+Repeats successful move
+Switches after poor outcome
+ Adaptive and reactive
+8 Grim Trigger
+Starts cooperative
+Defects forever after a single betrayal Extremely unforgiving
+What This Simulation Demonstrates
+Iterated strategic interaction
+Long-term vs short-term payoff optimization
+How small behavioral rules can lead to dramatically different long-term outcomes.
+🚀 Run Locally
+git clone https://github.com/yourusername/your-repo-name.git
+cd your-repo-name
+npm install
+npm start
