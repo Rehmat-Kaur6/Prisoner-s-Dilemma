@@ -43,47 +43,35 @@ At the end, the scoreboard displays:
 
 ### 1. Tit For Tat (TFT)
 
-- Starts by cooperating
-- Then copies opponent’s previous move
+Starts by cooperating, then copies opponent’s previous move
 
 ### 2. Generous Tit For Tat
 
-- Like TFT
-- Occasionally forgives defections
-- Prevents endless retaliation cycles
+Like TFT, occasionally forgives defections, and thus prevents endless retaliation cycles
 
 ### 3. Suspicious Tit For Tat
 
-- Starts by defecting
-- Then mirrors opponent
-- Defensive variation of TFT
+Starts by defecting, then mirrors opponent as a defensive variation of TFT
 
 ### 4. Always Defect
 
-- Defects every round
-- Maximizes short-term exploitation
+ Defects every round to maximize short-term exploitation
 
 ### 5. Always Cooperate
 
-- Cooperates every round
-- Highly exploitable but strong in cooperative environments
+ Cooperates every round, and is thus highly exploitable but strong in cooperative environments
 
 ### 6. Random
 
-- Chooses cooperate or defect randomly
-- Unpredictable, inconsistent
+ Chooses cooperate or defect randomly
 
 ### 7. Pavlov (Win-Stay, Lose-Shift)
 
-- Repeats successful move
-- Switches after poor outcome
-- Adaptive and reactive
+ Repeats successful move but switches after poor outcome
 
 ### 8. Grim Trigger
 
-- Starts cooperative
-- Defects forever after a single betrayal
-- Extremely unforgiving
+ Starts cooperative, but defects forever after a single betrayal, and is thus extremely unforgiving
 
 ## What This Simulation Demonstrates
 
